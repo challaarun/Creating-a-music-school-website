@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+   <!--
+      New Perspectives on HTML and CSS
+      Additional Cases
+      Case Problem 1
+
+      Young Notes Application Page
+      Author: Arun Kumar Reddy Challa
+      Date:   06/18/2016
+
+      Filename:         application.htm
+      Supporting files: formsubmit.js, fstyles.css,
+                        modernizr-1.5.js, ynlogo.jpg, ystyles.css
+                        
+   -->
+
+      <meta charset="UTF-8" />
+
+      <title>Young Notes Application</title>
+      <script src="modernizr-1.5.js"></script>
+      <script src="formsubmit.js"></script>
+
+      <link href="ystyles.css" rel="stylesheet" type="text/css"  />
+      <link href="fstyles.css" rel="stylesheet" type="text/css"  />
+
+   </head>
+
+   <body>
+
+      <header>
+         <img src="ynlogo.jpg" alt="Young Notes" />
+      </header>
+
+      <nav class="horizontal">
+         <ul>
+            <li><a href="young.htm">Home</a></li>
+            <li><a href="lessons.htm">Lessons</a></li>
+            <li><a href="staff.htm">Our Staff</a></li>
+            <li><a href="events.htm">Upcoming Events</a></li>
+            <li><a href="application.htm">Application</a></li>
+         </ul>
+      </nav>
+
+      <section id="main">
+         <h1>Application</h1>
+         <form id="interestForm" name="interestForm" action="www.youngnotesschool.com/cgi-bin/interest" method="post">
+         <fieldset id="contactFields">
+         <legend>Student Information</legend>
+         <label>First Name</label>
+         <input type="text" name="fName" required="required" />
+         <br/><br/>
+         <label>Last Name</label>
+         <input type="text" name="lName" required="required" /><br/><br/>
+         <label>Address</label>
+         <input type="text" name="address" required="required" /><br/><br/>
+         <label>City</label>
+         <input type="text" name="city" required="required" /><br/><br/>
+         <label>State</label>
+         <input type="text" name="state" value="Texas" required="required" /><br/><br/>
+         <label>Postal Code</label>
+         <input type="text" name="zip" pattern="^\d{5}(\-\d{4})?$" placeholder="nnnnn(-nnnn)"/><br/><br/>
+         <label>Phone</label>
+         <input type="text" name="phone" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn)nnn-nnn" required="required" /><br/><br/>
+         <label>Email</label>
+         <input name="email" type="email"/><br/><br/>
+         </fieldset>
+         <fieldset id="otherFields">
+         <legend>Other Information</legend>
+         <label>Name of Primary Contact</label>
+         <input type="text" name="pcontact" /><br/><br/>
+         <label for="ctype">Relation to Student</label>
+         <select name="ctype">
+		 <option value="Parent">Parent</option>
+		 <option value="Guardian">Guardian</option></select><br/><br/>
+         <label for="musicInterest">Musical Interest{Select all that apply}: </label>
+		 <select size="7" multiple="multiple" name="musicInterest">
+		 <option value="brass">Brass</option>
+		 <option value="drums">Drums</option>
+		 <option value="guitar">Guitar</option>
+		 <option value="piano">Piano</option>
+		 <option value="strings">Strings</option>
+		 <option value="voice">Voice</option>
+		 <option value="woodwinds">Woodwinds</option></select><br/><br />
+         <label for="years">Years of Previous Practice</label>
+         <select size="1" name="years" class="years">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+         <option value="11">11</option>
+		 <option value="12">12</option></select><br/><br />
+         </fieldset>
+         <input type="checkbox" name="call" class="call" />
+         <label for="call" class="call">Please contact me for a "Get to Know You" visit.</label>
+         <input type="submit" value="Submit Information" class="submit"/>
+	     <input type="reset" value="Cancel" class="reset"/></form>
+         </form>
+      
+      </section>
+      
+      <footer>
+         <address>
+            Young Notes &#183;
+            175 South Avenue &#183;
+            Brownwood, TX 76801 &#183;
+            (325) 555 - 0155 &#183;
+           info@youngnotesschool.com
+         </address>
+      </footer>
+
+
+   </body>
+
+</html>
